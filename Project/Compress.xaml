@@ -1,0 +1,52 @@
+﻿<Window x:Class="mCompress.Compress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mCompress"
+        xmlns:FluentControls="clr-namespace:MMHLco.FluentControls;assembly=MMHLco.FluentControls.DotNET6"
+        mc:Ignorable="d"
+                Title="Compress" Height="505" Width="468"
+    WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" Background="Transparent"
+    WindowStyle="None"
+    ResizeMode="NoResize">
+    <Border   CornerRadius="10"  Height="483.5" Width="446">
+
+        <Grid>
+            <Rectangle Fill="#F0F0F0" RadiusX="10" RadiusY="10">
+                <Rectangle.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="18"  Opacity="0.8" />
+                </Rectangle.Effect>
+            </Rectangle>
+            <Grid >
+                <FluentControls:FluentWButton HorizontalAlignment="Left" Height="32" Margin="238,442,0,0" VerticalAlignment="Top" Width="129" Text="Start Compression" FontSize="15" FontFamily="segoe ui light" MouseUp="FluentWButton_Loaded_1"/>
+                <FluentControls:FluentButton  Height="29" Margin="404,122,9,0"  Width="33" RenderTransformOrigin="0.5,0.5" Text="..." FontFamily="Segoe UI Black" FontSize="8" VerticalAlignment="Top" TextHorizontalAlignment="Center" TextVerticalAlignment="Top" MouseUp="FluentWButton_MouseUp_1"/>
+                <!--*******************************************************************************************-->
+                <!--*******************************************************************************************-->
+                <FluentControls:FluentTextBox x:Name="txtfrom"  Background="#F0F0F0" Text="Source folder" HorizontalAlignment="Left" Height="29" Margin="10,87,0,0" VerticalAlignment="Top" Width="389" FontSize="16"/>
+                <FluentControls:FluentTextBox x:Name="txtto"   Background="#F0F0F0" HorizontalAlignment="Left" Height="29" Margin="10,121,0,0" VerticalAlignment="Top" Width="389" Text="Destination path" FontSize="16"/>
+                <Label  Content="Options:" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" FontSize="15"/>
+                <Label Content="Compress" MouseLeftButtonDown="Label_MouseLeftButtonDown" HorizontalAlignment="Center" Height="55" Margin="0,10,0,0" VerticalAlignment="Top" Width="427" FontSize="30"/>
+                <FluentControls:FluentWButton  HorizontalAlignment="Left" Height="32" Margin="372,442,0,0" VerticalAlignment="Top" Width="65" Text="Close" FontSize="15" FontFamily="segoe ui light" MouseUp="FluentWButton_Loaded"/>
+                <Grid>
+                    <RadioButton x:Name="justpack" Content="Just Pack" HorizontalAlignment="Left" Margin="23,225,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="normal" Content="Normal" HorizontalAlignment="Left" Margin="23,245,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                    <RadioButton x:Name="ultra" Content="Ultra Compression" HorizontalAlignment="Left" Margin="23,265,0,0" VerticalAlignment="Top"/>
+                </Grid>
+                <FluentControls:FluentWButton  Height="29" Margin="404,122,10,0"  Width="31" RenderTransformOrigin="0.5,0.5" Text="..." FontFamily="Segoe UI" FontSize="16" VerticalAlignment="Top" TextHorizontalAlignment="Center" TextVerticalAlignment="Top" MouseUp="FluentWButton_MouseUp_1" ShadowBlurRadius="10" FullRadius="1"/>
+                <FluentControls:FluentWButton  Height="29" Margin="404,87,10,0"  Width="31" RenderTransformOrigin="0.5,0.5" Text="..." FontFamily="Segoe UI" FontSize="16" VerticalAlignment="Top" TextHorizontalAlignment="Center" TextVerticalAlignment="Top" MouseUp="FluentWButton_MouseUp" ShadowBlurRadius="10" FullRadius="1"/>
+                <FluentControls:FluentTextBox x:Name="txtto_Copy"  Background="#F0F0F0"  HorizontalAlignment="Left" Height="29" Margin="10,155,0,0" VerticalAlignment="Top" Width="389" Text="target archive name" FontSize="16"/>
+                <Grid>
+                    <RadioButton x:Name="sevenzip" Content="7-zip" HorizontalAlignment="Left" Margin="192,225,0,0" VerticalAlignment="Top" IsChecked="True" RenderTransformOrigin="0.5,-1.067"/>
+                    <RadioButton x:Name="tar" Content="tar" HorizontalAlignment="Left" Margin="192,245,0,0" VerticalAlignment="Top" />
+                    <RadioButton x:Name="zip" Content="zip" HorizontalAlignment="Left" Margin="259,248,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="wim" Content="wim" HorizontalAlignment="Left" Margin="259,225,0,0" VerticalAlignment="Top" Checked="Zip_Copy_Checked"/>
+                    <Label x:Name="label" Content="Status: " HorizontalAlignment="Left" Height="95" Margin="10,335,0,0" VerticalAlignment="Top" Width="427"/>
+                </Grid>
+                <FluentControls:FluentWButton HorizontalAlignment="Left" Height="32" Margin="10,295,0,0" VerticalAlignment="Top" Width="247" Text="xz, gzip and bzip2 formats operation" FontSize="15" FontFamily="segoe ui light" MouseUp="FluentWButton_MouseUp_2"/>
+
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

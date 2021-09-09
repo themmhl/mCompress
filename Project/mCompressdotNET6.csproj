@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>C:\Users\Martin-Jefferson\Pictures\mCompressIntro\Untitled-1.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="mCompressLOGO.jpg" />
+    <None Remove="Untitled-1.ico" />
+  </ItemGroup>
+<ItemGroup>
+  <Reference Include="MMHLco.FluentControls.DotNET6">
+    <HintPath>..\MMHLco.FluentControls.DotNET6\bin\Debug\net6.0-windows\MMHLco.FluentControls.DotNET6.dll</HintPath>
+  </Reference>
+  <Reference Include="System.Drawing.Common">
+    <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\6.0.0-preview.5.21301.4\System.Drawing.Common.dll</HintPath>
+    <Private>true</Private>
+  </Reference>
+  <Reference Include="System.Drawing.Design">
+    <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Drawing.Design.dll</HintPath>
+    <Private>true</Private>
+  </Reference>
+  <Reference Include="System.Windows.Forms">
+    <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll</HintPath>
+    <Private>true</Private>
+  </Reference>
+</ItemGroup>
+<ItemGroup>
+  <Resource Include="mCompressLOGO.jpg" />
+  <Resource Include="Untitled-1.ico" />
+</ItemGroup>
+
+</Project>

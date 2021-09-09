@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mCompress"
+        xmlns:FluentControls="clr-namespace:MMHLco.FluentControls;assembly=MMHLco.FluentControls.DotNET6"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="mCompress.View"
+        mc:Ignorable="d"
+                Title="About" Height="502" Width="709"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+        ShowInTaskbar="True"
+    AllowsTransparency="True"
+    ResizeMode="CanResizeWithGrip">
+    <Border CornerRadius="3"  Background="#f0F0F0">
+        <Grid>
+            <Label Content="View" MouseLeftButtonDown="Label_MouseLeftButtonDown" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="412" FontSize="30"/>
+            <FluentControls:FluentWButton x:Name="openBTN" HorizontalAlignment="Left" Height="45" Margin="88,66,0,0" VerticalAlignment="Top" Width="71" Text="Open" FontSize="24" FontFamily="Corbel Light" MouseUp="openBTN_MouseUp" ShadowBlurRadius="15"/>
+            <FluentControls:FluentWButton x:Name="newBTN" HorizontalAlignment="Left" Height="45" Margin="12,66,0,0" VerticalAlignment="Top" Width="71" Text="New" FontSize="24" FontFamily="Corbel Light" MouseUp="newBTN_MouseUp" ShadowBlurRadius="15"/>
+            <FluentControls:FluentWButton HorizontalAlignment="Left" Height="45" Margin="323,66,0,0" VerticalAlignment="Top" Width="128" Text="Test Archive" FontSize="24" FontFamily="Corbel Light" ShadowBlurRadius="15" MouseUp="TestArchiveClicked" />
+            <FluentControls:FluentWButton HorizontalAlignment="Left" Height="45" Margin="247,66,0,0" VerticalAlignment="Top" Text="Delete" FontSize="24" FontFamily="Corbel Light" MouseUp="FluentWButton_MouseUp" Width="71" d:LayoutOverrides="HorizontalAlignment" ShadowBlurRadius="15"/>
+            <FluentControls:FluentWButton Height="45" Margin="164,66,467,0" VerticalAlignment="Top" Text="Extract" FontSize="24" FontFamily="Corbel Light" MouseUp="ExtractClicked" ShadowBlurRadius="15" />
+            <FluentControls:FluentWButton HorizontalAlignment="Left" Height="45" Margin="532,66,0,0" VerticalAlignment="Top" Width="71" Text="Copy" FontSize="24" FontFamily="Corbel Light" MouseUp="FluentWButton_MouseUp_1" ShadowBlurRadius="15"/>
+            <FluentControls:FluentWButton HorizontalAlignment="Left" Height="45" Margin="456,66,0,0" VerticalAlignment="Top" Width="71" Text="Test" FontSize="24" FontFamily="Corbel Light" MouseUp="TestClicked" ShadowBlurRadius="15" />
+            <FluentControls:FluentWButton  ShadowBlurRadius="15"  MouseUp="closerec_MouseUp"  HoverColor="Red" BackColor="#FFE2E0E0" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top"  Text="×" FontSize="22" TextHorizontalAlignment="Stretch" TextVerticalAlignment="Stretch" Width="56" RadiusY="2" Height="34" Fill="#FFE2E0E0" FontFamily="Segoe UI Variable Small Light"/>
+            <FluentControls:FluentWButton x:Name="maxrec" ShadowBlurRadius="15"  MouseUp="maxrec_MouseUp" Fill="#FFE2E0E0" HoverColor="#FF748DE4" BackColor="#FFE2E0E0" HorizontalAlignment="Right" Margin="0,10,72,0" VerticalAlignment="Top"  Text="◻" TextHorizontalAlignment="Stretch" TextVerticalAlignment="Center" Width="56" RadiusY="2" FontFamily="Microsoft YaHei UI Light" FontSize="14" Height="34"/>
+            <ListView x:Name="listView" Margin="10,120,10,43" ItemsSource="{Binding TrackCollection}" MouseDoubleClick="listView_MouseDoubleClick"/>
+            <Label x:Name="labelStatus" Content="Status" Margin="12,0,0,0" VerticalAlignment="Bottom" Height="38" />
+        </Grid>
+    </Border>
+</Window>
